@@ -17,6 +17,8 @@ int main(int argc, const char* argv[]) {
 
   disassembleChunk(&chunk, "Test Chunk");
 
+  interpret(&chunk);
+
   freeVM();
   freeChunk(&chunk);
 
