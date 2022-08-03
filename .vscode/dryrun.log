@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/dj/Code/VSCodeProjects/Clox'
+gcc -g -c src/memory.c src/chunk.c src/debug.c src/value.c src/vm.c
+gcc -g main.c -o main memory.o chunk.o debug.o value.o vm.o
+make: Leaving directory '/home/dj/Code/VSCodeProjects/Clox'
+ 
