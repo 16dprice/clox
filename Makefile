@@ -6,10 +6,10 @@ TARGET	= main
 default: all
 
 all: deps
-	$(CC) $(CFLAGS) main.c -o $(TARGET) memory.o chunk.o debug.o value.o vm.o
+	$(CC) $(CFLAGS) main.c -o $(TARGET) memory.o chunk.o debug.o value.o vm.o compiler.o
 
 deps:
-	$(CC) $(CFLAGS) -c src/memory.c src/chunk.c src/debug.c src/value.c src/vm.c
+	$(CC) $(CFLAGS) -c src/memory.c src/chunk.c src/debug.c src/value.c src/vm.c src/compiler.c
 
 run:
 	make
@@ -19,4 +19,4 @@ run:
 	make clean
 
 clean:
-		$(RM) main chunk.o debug.o memory.o value.o vm.o
+		$(RM) main chunk.o debug.o memory.o value.o vm.o compiler.o
